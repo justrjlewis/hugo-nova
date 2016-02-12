@@ -1,0 +1,21 @@
+<!-- date and time -->
+  <div style="margin-bottom:25px;">
+    <p style="margin-top:10px;  font-size: 18px; font-weight:bold; text-transform:uppercase;">
+      <span style="background-image: url('https://novashrm.site-ym.com/resource/resmgr/images/page_accent_images/accents2.png'); background-size: auto 16px; background-repeat: no-repeat; background-position: -45.5px center; color: rgb(218, 98, 0); display: inline-block; overflow: none; width: 16px;">&nbsp;</span> program agenda</p>
+    <p style="margin-left: 20px;">
+    <span style="font-weight:bold;"><span style="color: rgb(37, 103, 189); font-size: 14pt;">{{ .Title }}</span></span><br>
+    <span style="font-weight:bold;"><span style=" font-size: 12pt;">{{ .Params.subtitle }}</span></span></p>
+    <p style="margin-left: 20px;">
+      <span style="font-weight:bold;"><span style="color: rgb(37, 103, 189); font-size: 14pt;">{{ .Date.Format "Monday, January 2, 2006" }} </span></span>
+      <span style="font-weight:bold;"><span style="color: rgb(37, 103, 189); font-size: 14pt;"> {{ .Params.starttime }} – {{ .Params.endtime }}</span></span>
+    </p>
+    <p style="margin-left: 20px;">
+      <span style="font-weight:bold;">Sessions:</span><br/>
+      <ul style="list-style-type: none; margin-left: 10px;">
+        <li><span style="color: rgb(37, 103, 189); text-transform:capitalize;">registration &amp; networking:</span> {{ .Params.registration }}</li>
+        <li><span style="color: rgb(37, 103, 189); text-transform:capitalize;">announcements:</span> {{ .Params.announcements }}</li>
+        <li><span style="color: rgb(37, 103, 189); text-transform:capitalize;">program:</span> {{ .Params.program }}</li>
+        <li><span style="color: rgb(37, 103, 189); font-weight:bold; text-transform:capitalize;">evaluations &amp; Wrap-up:</span> {{ .Params.wrapup }}</li>
+      </ul>
+    </p>
+  </div>

@@ -1,0 +1,8 @@
+<h2>Articles</h2>
+{{ range first 10 .Data.Pages }}
+  {{ if eq .Type "event"}}
+    <h4>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h4>
+  {{ end }}
+{{ end }}

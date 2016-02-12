@@ -1,0 +1,31 @@
+<!-- fees -->
+  <div style="margin-bottom:25px;">
+    <p style="margin-top:10px;  font-size: 18px; font-weight:bold; text-transform:uppercase;">
+    <span style="background-image: url('https://novashrm.site-ym.com/resource/resmgr/images/page_accent_images/accents2.png'); background-size: auto 16px; background-repeat: no-repeat; background-position: -45.5px center; color: rgb(218, 98, 0); display: inline-block; overflow: none; width: 16px;">&nbsp; </span> registration fees</p>
+    <p style="margin-left: 20px;">
+      <p>
+        Fee Policy: Registrations received more than 4 business days prior to the event will receive a $10 discount from the regular registration rates.
+        <span style="border-bottom:1px solid rgb(37, 103, 189);">
+          Early Bird Registration Deadline: 
+        </span>
+       <span style="color: rgb(37, 103, 189);">{{ .Params.earlydeadline }}</span> 
+      </p>
+      <p>
+        <span style="border-bottom:1px solid rgb(37, 103, 189);">
+          Fee Schedule:
+        </span><br>
+        <span style="font-weight:bold;"><span style="color: rgb(37, 103, 189);">Member:</span> ${{ .Params.proMember }}</span><br>
+        <span style="font-weight:bold;"><span style="color: rgb(37, 103, 189);">Student Member:</span> ${{ .Params.studentMember }}</span> | Limit: {{ .Params.studentMemberLimit }}<br>
+        <span style="font-weight:bold;"><span style="color: rgb(37, 103, 189);">Transition Member:</span> ${{ .Params.transitionMember }}</span> | Limit: {{ .Params.transitionMemberLimit }}<br>
+        <span style="font-weight:bold;"><span style="color: rgb(37, 103, 189);">Non-Member:</span> ${{ .Params.nonMember }}</span><br>
+      </p>
+
+    </p>
+    <p style="margin-left: 20px;">
+      <span style="margin: 0px; padding: 10px; display: inline-block; background-color: #ffd700; text-transform: uppercase;">
+        <a href="http://www.novashrm.org/store.html?event_id=#">Register Now</a>
+      </span>
+    </p>
+  </div>
+
+<hr>
