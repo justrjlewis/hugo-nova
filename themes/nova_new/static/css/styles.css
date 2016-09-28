@@ -1,0 +1,31 @@
+html, body {
+  position: relative;
+}
+body {
+  padding: .5rem;
+}
+.highlight {
+  font-size: 12px;
+}
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  padding: 20px;
+}
+.time {
+  color: #b0b0b1;
+  font-size: .65rem; 
+}
+.nova-heading {
+  color: #666666;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.nova-subheading {
+  color: rgba(220, 99, 3, 1) !important;
+}

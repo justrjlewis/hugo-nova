@@ -1,4 +1,8 @@
-{{ partial "event/agenda.html" . }}
-{{ partial "event/location.html" . }}
-{{ partial "event/continuinged.html" . }}
-{{ partial "event/fees.html" . }}
+{{ partial "event/header.html" . }}
+<p style="letter-spacing: normal !important; word-spacing: normal; width: 100%;"><a href="{{ .Site.BaseURL }}">Home</a></p>
+<div class="container" style="background-color: transparent;">
+  <article class="post-container" style="letter-spacing: normal !important;">
+    {{ .Content }}
+  </article>
+</div>
+{{ partial "footer.html" . }}

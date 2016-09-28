@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+<p><a style="letter-spacing: normal !important;" href="{{ .Site.BaseURL }}">Home</a></p>
+  <div class="container" style="background-color: transparent !important;">
+    {{ partial "eventym/page_details.html" . }}
+
+    {{ .Content }}
+  </div>
+{{ partial "footer.html" . }}

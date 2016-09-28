@@ -2,23 +2,47 @@
 {{ $baseurl := .Site.BaseURL }}
 
   <p style="color:#d3165b;">hugo says hello!</p>
-  <h2>Events</h2>
+  <p><a style="letter-spacing: normal !important;" href="{{ .Site.BaseURL }}">Home</a></p>
+  <hr>
 
+  <h4 style="display: inline-block;">Pages:</h4>
   {{ range .Data.Pages }}
-    {{ if eq .Type "event" }}
-      <h4>
+    {{ if eq .Type "page" }}
+      <h4  style="display: inline-block;">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </h4>
     {{ end }}
   {{ end }}
 
-  <h2>Pages</h2>
+<h3>Article Pages</h3>
+<ul>
   {{ range .Data.Pages }}
-    {{ if eq .Type "page" }}
-      <h3>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </h3>
+    {{ if eq .Type "article"}}
+      {{ .Render "list"}}
     {{ end }}
   {{ end }}
+</ul>
+
+<h3>Events</h3>
+<ul>
+  {{ range first 10 ( where .Data.Pages "Type" "event") }}
+    {{ .Render "list"}}
+  {{ end }}
+</ul>
+
+<h3>Legal Affairs</h3>
+<ul>
+  {{ range first 5 ( where .Data.Pages "Section" "legal") }}
+    {{ .Render "list"}}
+  {{ end }}
+</ul>
+
+<h3>Newsletter</h3>
+<ul>
+  {{ range first 5 ( where .Data.Pages "Section" "newsletter") }}
+    {{ .Render "list"}}
+  {{ end }}
+</ul>
+  
 
 {{ partial "footer.html" . }}

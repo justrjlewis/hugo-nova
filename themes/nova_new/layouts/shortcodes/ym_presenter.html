@@ -1,0 +1,28 @@
+<!-- speaker bios -->
+{{ with $.Page.Params.speakername }}
+  <div style="margin-bottom: 25px; padding-left: 10px; padding-right: 10px;">
+    <p style="font-weight: bold; margin-top: 10px; text-transform: uppercase;">presenter information</p>{{ range $index, $element := $.Page.Params.speakername }}{{ if and (gt (len $.Page.Params.speakername) 0) (ne (index $.Page.Params.speakername $index) "") }}
+      <div style="">
+        <p style="line-height: 18px; color: #2567bd">
+          {{ index $.Page.Params.speakername $index }}{{ if ne (index $.Page.Params.speakertitle $index) "" }}&nbsp;‖&nbsp;— {{ index $.Page.Params.speakertitle $index }},&nbsp;{{ end }}{{ $company := index $.Page.Params.speakercompany $index }}{{ if ne $company "" }}{{ $company }}{{ end }}
+        </p>{{ $email := index $.Page.Params.speakeremail $index }}{{ if ne (index $email $index) "" }}
+        <p style="line-height: 18px;">
+          <span style="color: #981b1e; font-weight: bold;">Email:</span>&nbsp;<a href="mailto:{{ $email }}">{{ $email }}</a>
+        </p>{{ end }} <!-- end email -->{{ $website1 := index $.Page.Params.speakerwebsite1 $index }}{{ if ne $website1 "" }}
+        <p style="line-height: 18px;">
+          <span style="color: #981b1e; font-weight: bold;">Website:</span>&nbsp;<a href="{{ $website1 }}">{{ $website1 }}</a>
+        </p>{{ end }} <!-- end website -->{{ $website2 := index $.Page.Params.speakerwebsite2 $index }}{{ if ne $website2 "" }}
+        <p style="line-height: 18px;">
+          <span style="color: #981b1e; font-weight: bold;">Website:</span>&nbsp;<a href="{{ $website2 }}">{{ $website2 }}</a>
+        </p>{{ end }} <!-- end website -->{{ $website3 := index $.Page.Params.speakerwebsite3 $index }}{{ if ne $website3 "" }}
+        <p style="line-height: 18px;">
+          <span style="color: #981b1e; font-weight: bold;">Website:</span>&nbsp;<a href="{{ $website3 }}">{{ $website3 }}</a>
+        </p>{{ end }} <!-- end website -->{{ $website4 := index $.Page.Params.speakerwebsite4 $index }}{{ if ne $website4 "" }}
+        <p style="line-height: 18px;">
+          <span style="color: #981b1e; font-weight: bold;">Website:</span>&nbsp;<a href="{{ $website4 }}">{{ $website4 }}</a>
+        </p>{{ end }} <!-- end website -->{{ $bio := index $.Page.Params.speakerbio $index }}{{ if ne $bio "" }}
+        <div style="line-height: 18px;">
+          {{ $bio | markdownify }}
+        </div>{{ end }}
+      </div>{{ end }} <!-- end speakername len -->{{ end }} <!-- end speakername range -->
+  </div>{{ end }} <!-- end speaker block -->

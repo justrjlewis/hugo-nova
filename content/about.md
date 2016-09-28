@@ -5,4 +5,4 @@ title = "About me"
 slug = "about"
 +++
 
-This is a really good content!
+This is a really good content! This template is used to post events to novashrm.org

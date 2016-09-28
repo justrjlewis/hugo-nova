@@ -1,0 +1,29 @@
+{{ $tag := .Get 0 }}
+{{ $inner := .Get 1 }}
+
+{{ if eq $tag "h1" }}
+  <h1>
+    <span class="nova-heading">{{ $inner }}</span>
+  </h1>
+{{ else if eq $tag "h2" }}
+  <h2>
+    <span class="nova-heading">{{ $inner }}</span>
+  </h2>
+{{ else if eq $tag "h3" }}
+  <h3>
+    <span class="nova-heading">{{ $inner }}</span>
+  </h3>
+{{ else if eq $tag "h4" }}
+  <h4>
+    <span class="nova-heading">{{ $inner }}</span>
+  </h4>
+{{ else if eq $tag "h5" }}
+  <h5>
+    <span class="nova-heading">{{ $inner }}</span>
+  </h5>
+{{ else }}
+  <p>
+    <span class="nova-heading">{{ $inner }}</span>
+  </p>
+{{ end }}
+

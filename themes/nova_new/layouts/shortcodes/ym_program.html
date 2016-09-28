@@ -1,0 +1,23 @@
+<!-- program details -->
+<div style="background-color: #f7f7f7; border-bottom: 1px solid #d9d7d9; margin-bottom: 25px; padding-left: 10px; padding-right: 10px; padding-top: 10px;">
+  <p style="font-family: sans-serif; font-weight: bold; font-size: 14px; margin-top:10px; text-transform:uppercase;">program information</p>{{ range $index, $element := $.Page.Params.programdescription }}{{ if gt (len $.Page.Params.programdescription) 0 }}{{ if ne (index $.Page.Params.speakername $index) "" }}
+    <p style="margin-bottom: 15px; padding: 15px 0px 10px">
+      <span style="text-transform: capitalize">Presenter ‖ {{ index $.Page.Params.speakername $index }}</span>&mdash; {{ with $.Page.Params.speakertitle }} {{ index . $index }} {{ end }}, {{ with $.Page.Params.speakercompany }} {{ index . $index }} {{ end }}<br />{{ else }}
+      <div style="padding: 15px 0px 10px">{{ end }} <!-- end session presenter -->{{ if ne (index $.Page.Params.sessiontitle $index) "" }}
+        <span style="color: #2567bd; font-family: verdana, geneva, sans-serif; font-size: 13px; font-weight: bold;">{{ if eq (index $.Page.Params.programdescription $index) "" }}{{ dateFormat "03:04PM" (index $.Page.Params.sessiontime $index) }} <br />{{ end }}</span>
+        <span style="font-weight: 600; text-decoration: underline;">{{ title (index $.Page.Params.sessiontitle $index) }}{{ if ne (index $.Page.Params.sessionsubtitle $index) "" }}  &ndash; {{ index $.Page.Params.sessionsubtitle $index }}{{ end }}</span>{{ end }} <!-- end session title -->{{ if ne (index $.Page.Params.ce $index) "" }}{{ if eq (index $.Page.Params.ce $index) "true" }}
+        <div style="padding-left: 18px; text-indent: -18px;">
+          <span style="color: #981b1e; font-family: arial, helvetica, sans-serif; font-size: 20px">◘</span><span style="color: #2567bd;">{{ if eq (index $.Page.Params.cecreditsapproved $index) "true" }}
+                  This event is <strong>approved</strong> for {{with $.Page.Params.cecredits }}<strong>{{ index . $index }}</strong>{{ end }} {{with $.Page.Params.cecreditstype }}<strong>{{ title (index . $index) }}</strong>{{ end }} recertification credits through the Human Resource Certification Institute (HRCI) and {{with $.Page.Params.cecredits }}<strong>{{ index . $index }}</strong>{{ end }} Society for Human Resource Management (SHRM) recertification credits.<br/>
+          <span style="">All attendees (member and non-members) may receive HRCI credits, when offered for an event.</span>{{else}}This program has been submitted to the HR Certification Institute and the Society for Human Resource Management for review.{{ end }}</span>
+        </div>{{ end }} <!-- end ce true -->
+      </div>{{ end }} <!-- end continueing ed -->
+    </p>{{ if ne (index $.Page.Params.programdescription $index) "" }}
+    <div style="">
+      {{ index $.Page.Params.programdescription $index | markdownify }}
+    </div>{{ end }}  <!-- end program description -->{{ if ne (index $.Page.Params.programbenefits $index) "" }}
+    <div style="">
+      <span style="font-weight: 600; text-decoration: underline">Learning Objectives:</span><br />
+      {{ index $.Page.Params.programbenefits $index | markdownify }}
+    </div>{{ end }} <!-- end program benefits -->{{ end }} <!-- end program description length check -->{{ end }} <!-- end range -->
+</div>

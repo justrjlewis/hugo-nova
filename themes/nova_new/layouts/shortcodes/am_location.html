@@ -1,0 +1,43 @@
+<!-- location -->
+  {{ with .Page.Params.locationnameanddescription }}
+    <div style="margin-bottom:25px;">
+      <p style="color: #666666; font-family: verdana, geneva; font-weight: bold; font-size: 14px; margin-top:10px; padding-left: 15px; padding-right: 15px; text-transform:uppercase;">
+        location
+      </p>
+      <div style="color: #666666; margin-left: 15px; padding-bottom: 8px;">
+        {{- . -}} | {{ $.Page.Params.locationfulladdress }}
+      </div>
+    {{- with $.Page.Params.locationdirections -}}
+      <!-- directions -->
+      <div style="margin-left: 15px; padding-bottom: 8px;">
+        <span style="color: rgba(152, 27, 30, 1); display: inline-block; font-family: verdana, geneva; font-size: 13px; font-weight: bold;">Directions:</span>&nbsp;
+      </div>
+      <div style="color: rgb(102, 102, 102); margin-left: 15px; padding-bottom: 8px;">
+          {{- . | markdownify -}} 
+      </div>
+    {{- end -}}
+    {{- with $.Page.Params.locationparking -}}
+      <!-- parking -->
+      <div style="margin-left: 15px; padding-bottom: 8px;">
+        <span style="color: rgba(152, 27, 30, 1); display: inline-block; font-family: verdana, geneva; font-size: 13px; font-weight: bold;">Parking:</span>
+        <span style="color: rgb(102, 102, 102); margin-left: 0; padding-left: .5em; text-indent: 20px;"> {{ . | markdownify }}</span>
+      </div>
+    {{- end -}}
+    </div>
+  {{ end }}
+<!-- online location -->
+  {{- with .Page.Params.locationurl -}}
+  <div style="margin-bottom:25px;">
+    <p style="color: #666666; font-family: verdana, geneva; font-weight: bold; font-size: 14px; margin-top:10px; padding-left: 15px; padding-right: 15px; text-transform:uppercase;">
+      location
+    </p>
+    <p style="margin-left: 15px;">
+      <span style="padding-bottom: 8px; display: block;">Webinar</span>
+        <!-- notice -->
+      <span style="color: rgb(218, 98, 0); display: inline-block;">Notice:</span>&nbsp;
+      <span style="color: rgb(102, 102, 102);">
+        Registrants will be sent the webinar login information in the meeting reminder email prior to the event.
+      </span>
+    </p>
+  </div>
+  {{ end }}

@@ -1,0 +1,80 @@
+baseurl = "http://localhost:2016"
+languageCode = "en-us"
+theme = "nova"
+
+[blackfriday]
+  extensions = ["hardLineBreak"]
+
+[permalinks]
+  event = "/:year/:month/:day/:slug"
+
+[taxonomies]
+
+[params]
+  DateForm = "2 January 2006"
+  headline = "hugo + novashrm"
+  
+  title = "new northern virginia shrm event"
+  subtitle = "event subtitle"
+  pagenotfoundtitle = ""
+  pagenotfoundsubtitle = ""
+
+  reqdate = "2006-01-02"
+  PublishDate = "2006-01-02"
+  earlybirdexpiration = "2006-01-02"
+  
+  #news & legal
+  edition = "2006-01-02"
+  link = ""
+  
+  # agenda
+    formatteddate = "friday, march 4, 2016"
+    formattedtime = "5:30pm - 8:00 pm"
+
+    session1name = "registration/networking:"
+    session1time = "2016-01-02T17:30:00Z"
+    session2name = "announcements:"
+    session2time = "2016-01-02T17:45:00Z"
+    session3name = "program:"
+    session3time = "2016-01-02T18:00:00Z"
+    session4name = "question and answer:"
+    session4time = "2016-01-02T19:30:00Z"
+    session5name = "other session:"
+    session5time = "2016-01-02T17:30:00Z"
+    session6name = "other session:"
+    session6time = "2016-01-02T17:30:00Z"
+
+  # location
+    locationnameanddescription = "gannett/tegna, first amendment dining room"
+    locationfulladdress = "7950 jones branch drive, mclean, va 22107"
+    locationdirections = "members can now take the silver line to either the tyson’s or mclean stations. at the mclean station, guests can either take the 423 or 424 bus to the jones branch bus stop which is right in front of the gannett building. at the tyson’s station, guests can take the 424 bus."
+    locationparking = "please park on level p2 (follow signs to event parking)"
+
+  # continuing ed
+    ce = "yes"
+    credits = "1.5"
+    creditsapproved = "no"
+    creditstype = "general or business"
+
+  # fees
+    feeboardmember = "0"
+    feestudentmember = "0"
+    feetransitionmember = "0"
+    feemember = "55"
+    feenonmember = "70"
+
+  # program
+    programbenefits = """benefits and learning objectives of this program"""
+
+  # speaker
+    speakername = ["first and last"]
+    speakertitle = ["company title"]
+    speakercompany = ["company"]
+    speakeremail = ["email@mail.com"]
+    speakerwebsite1 = ["website.com"]
+    speakerwebsite2 = ["website.com"]
+    speakerwebsite3 = ["website.com"]
+    speakerwebsite4 = ["website.com"]
+    speakersession = ["program, or session title"]
+    speakerbio = ["""speaker's bio information"""]
+  

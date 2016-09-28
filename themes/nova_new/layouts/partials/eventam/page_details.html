@@ -1,0 +1,17 @@
+<div>
+  {{ range $index, $element := $.Params.programdescription }}
+    {{ if gt (len $.Params.programdescription) 0 }}
+      {{ if ne (index $.Params.programdescription $index) "" }}
+        {{ $.Params.programdate }}<br><br>
+        <div><strong>Northern Virginia SHRM {{ with $.Params.programdate }}{{ dateFormat "January" . }}{{ end }} {{ $.Params.formattedtype }} Event</strong><br />{{ $.Title }}</div>
+        <div><strong>Program Date/Time:</strong></div>
+        <div>{{ $.Params.formatteddate }}</div>
+        <div>{{ $.Params.formattedtime }}</div>
+        <div><strong>Location:</strong></div>
+        <div>{{ $.Params.locationnameanddescription }}</div>
+        <div>{{ $.Params.locationfulladdress }}</div>
+        <div>{{ $.Params.locationurl }}</div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</div>

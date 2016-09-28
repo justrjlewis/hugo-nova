@@ -1,0 +1,28 @@
+<!-- location -->
+  {{ with .Page.Params.locationparking }}
+    <div style="margin-bottom:25px; padding-left: 10px; padding-right: 10px;">
+      <p style="font-family: sans-serif; font-weight: bold; font-size: 14px; margin-top:10px;text-transform:uppercase;">
+        parking
+      </p>
+      <!-- parking -->
+      <div style="padding-bottom: 8px;">
+        {{ . | markdownify }}
+      </div>
+    </div>
+  {{ end }}
+<!-- online location -->
+  {{ with .Page.Params.locationurl }}
+  <div style="margin-bottom:25px; padding-left: 10px; padding-right: 10px;">
+    <p style="font-family: sans-serif; font-weight: bold; font-size: 14px; margin-top:10px; padding-left: 15px; padding-right: 15px; text-transform:uppercase;">
+      location
+    </p>
+    <p style="">
+      <span style="padding-bottom: 8px; display: block;">Webinar</span>
+        <!-- notice -->
+      <span style="color: #981b1e; display: inline-block;">Notice:</span>&nbsp;
+      <span style="color: rgb(102, 102, 102);">
+        Registrants will be sent the webinar login information in the meeting reminder email prior to the event.
+      </span>
+    </p>
+  </div>
+  {{ end }}

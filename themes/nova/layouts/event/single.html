@@ -1,10 +1,34 @@
 {{ partial "header.html" . }}
+<p><a style="letter-spacing: normal !important;" href="{{ .Site.BaseURL }}">Home</a></p>
+<div class="container" style="background-color: transparent !important;">
+  <article class="post-container" style="">
+    <h3>Event Short Description:</h3>
+    {{ partial "event/intro.html" . }}
+  </article>
+</div>
+<hr>
 <div class="container">
-  <article class="post-container">
+  <article class="post-container" style="">
+    <h3>novashrm.org</h3>
+    {{ partial "event/am-info.html" . }}
     {{ partial "event/agenda.html" . }}
     {{ partial "event/location.html" . }}
     {{ partial "event/continuinged.html" . }}
     {{ partial "event/fees.html" . }}
+    {{ partial "event/program_new.html" . }}
+    {{ partial "event/speaker_new.html" . }}
+  </article>
+</div>
+<div class="container">
+  <article class="post-container" style="margin-top: 20px;">
+    <h3>novashrm.ym-site</h3>
+    {{ partial "event/ym-info.html" . }}
+    {{ partial "event/ym-agenda.html" . }}
+    {{ partial "event/ym-location.html" . }}
+    {{ partial "event/continuinged.html" . }}
+    {{ partial "event/ym-fees.html" . }}
+    {{ partial "event/program_new.html" . }}
+    {{ partial "event/speaker_new.html" . }}
   </article>
 </div>
 {{ partial "footer.html" . }}

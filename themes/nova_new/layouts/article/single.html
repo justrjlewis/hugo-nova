@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+<p><a style="letter-spacing: normal !important;" href="{{ .Site.BaseURL }}">Home</a></p>
+<hr>
+<div class="container">
+  <article class="post-container" style="letter-spacing: normal !important;">
+    <h2 style="text-transform: capitalize;">{{ .Title }}</h2>
+    {{ .Content }}
+  </article>
+</div>
+{{ partial "footer.html" . }}

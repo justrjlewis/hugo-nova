@@ -1,0 +1,18 @@
+
+<li>
+  <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+  <span class="time">
+  {{ with .Params.reqdate }}
+    Requested: 
+    <time>{{ dateFormat "1-2-2006 03:04 PM" . }}</time>
+  {{ end }}
+  {{ with .Date }}
+     | Posted: 
+    <time>{{ dateFormat "1-2-2006" . }}</time>
+  {{ end }}
+  {{ with .Params.eventdate }}
+     | Event Date: 
+    <time>{{ dateFormat "1-2-2006" . }}</time>
+  {{ end }}
+  </span> &nbsp; {{ with .Params.formattedcategory }}{{ . }}{{ end }}
+</li>

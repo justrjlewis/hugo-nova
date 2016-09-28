@@ -1,0 +1,76 @@
+html, body {
+  position: relative;
+}
+body {
+  padding: .5rem;
+}
+.time {
+  color: #b0b0b1;
+  font-size: .65rem; 
+}
+.pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  background-color: rgb(216, 216, 216);
+  margin-bottom: 30px;
+  padding: 2px;
+}
+.container:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.container:focus {
+  background-color: rgba(495, 249, 249, 0);
+}
+.nova-heading {
+  border-bottom-style: solid; 
+  border-bottom-width: 1px;
+  color:rgba(159, 0, 1, 1);
+  text-transform: uppercase;
+}
+.nova-subheading {
+  color: rgba(220, 99, 3, 1) !important;
+}
+
+html, body {
+  position: relative;
+}
+body {
+  padding: .5rem;
+}
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.time {
+  color: #b0b0b1;
+  font-size: .65rem; 
+}
+/*.pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}*/
+
+/*.container:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.container:focus {
+  background-color: rgba(495, 249, 249, 0);
+}*/
+.nova-heading {
+  border-bottom-style: solid; 
+  border-bottom-width: 1px;
+  color:rgba(159, 0, 1, 1);
+  text-transform: uppercase;
+}
+.nova-subheading {
+  color: rgba(220, 99, 3, 1) !important;
+}

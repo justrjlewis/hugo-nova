@@ -1,0 +1,53 @@
+{
+  "contentdir": "content",
+  "layoutdir": "layouts",
+  "publishdir": "public",
+
+  "builddrafts": false,
+
+  "baseurl": "http://localhost:2016",
+  "canonifyurls": true,
+  "languageCode": "en-us",
+  "theme": "nova",
+  "permalinks": {
+     "event": "/:year/:month/:slug",
+     "fixed": ":title/"
+  },
+  "params": {
+    "title": "New Northern Virginia SHRM Event",
+    "EditLink": "https://www.cognitoforms.com/NorthernVirginiaSHRM",
+    "ProgramTitleOrPageName":"Aligning Compensation to Career Paths",
+    "ProgramSubtitle":"A Holistic Approach to Employee Retention & Development",
+    "ProgramType":"SIG: Compensation & Benefits",
+    "FormattedDate":"Friday, March 4, 2016",
+    "FormattedTime":"8:00 AM - 10:00 AM",
+    
+    "Location":{
+      "Address":{"City":"McLean","CityStatePostalCode":"McLean, Virginia 22102-3853","Country":"United States","FullAddress":"7900 Westpark Drive, Suite A550, McLean, Virginia 22102-3853","FullInternationalAddress":"7900 Westpark Drive, Suite A550, McLean, Virginia 22102-3853, United States","Latitude":0.0,"Line1":"7900 Westpark Drive","Line2":"Suite A550","Line3":null,"Longitude":0.0,"PostalCode":"22102-3853","State":"Virginia","StreetAddress":"7900 Westpark Drive, Suite A550","Type":"Home"},
+      "LocationNameAndDescription":"NOVA Chamber of Commerce (formerly Fairfax Chamber)"
+    },
+    "Directions":"From Route VA-267 E/ Dulles Access Toll Rd toward Washington. Take the Spring Hill Road, Exit 17, toward VA-684. Merge onto Spring Hill Rd, which becomes International Drive. Turn left onto Westpark Drive. 7900 Westpark Drive is on the left.",
+    "Parking":"Building Entrance Instructions: Enter the Guest Parking Garage from Westpark Drive. Take a parking ticket. Validation will be provided by the Chamber. Use the building entrance from the parking garage. Continue straight through the Atrium –pass the gym and convenience store. Take the elevators at the end of the Atrium to the 5th floor. Take a right off the elevator to the Chamber Office.",
+    "SpeakerInformation":[{
+      "Name":{
+        "First":"Shelly",
+        "FirstAndLast":"Shelly Price",
+        "Last":"Price",
+        "Middle":null,
+        "MiddleInitial":null,
+        "Prefix":null,
+        "Suffix":null
+      },
+      "Title":"Team Leader",
+      "Company":"Helios HR",
+      "Email":"sprice@helioshr.com",
+      "Websites":[{"Website":"http://www.helioshr.com/","Website2":null,"ItemNumber":1}],
+      "SpeakerPhoto":[{"ContentType":"image/jpeg","Id":"F-4xFOLF185o8NuS6p1dfViu","Name":"Shelly Price.jpg","Size":698497}],
+      "ProgramTitle":"Aligning Compensation to Career Paths: A Holistic Approach to Employee Retention & Development",
+      "SpeakerBio2":"Expertise\nShelly Price has a demonstrated history of achievement in directing the performance and effectiveness of all Human Resource functions: organization development and training, employee relations, recruiting, benefits, HRIS, and compensation. With 15 years of experience in highly matrixed, global professional services organizations in both nonprofit and for-profit sectors, Ms. Price has supported executives and leaders in many lines of business. While Ms. Price’s experience spans the full-spectrum of Human Resources, she possesses deep experience and skills in performance management, organizational development and training, Human Resource strategy development and operations management, and employee relations. \n\nMs. Price holds specialized training in organizational development and has designed organization structures aligned to strategy, implemented leadership development training programs, and led employee engagement action planning. As an HR leader of people, Ms. Price also brings Human Resource operations experience including strategic and operations planning. \n\nEducation/Professional Designations\nMs. Price holds an MBA, concentration in Human Resource Management, from Hood College. She is an Organizational Development Certified Professional, a Senior Professional in Human Resources (SPHR) and is also certified in the MBTI® assessment, DiSC® profile, and FourSight™ thinking profile.",
+      "ItemNumber":1
+    }],
+    "PageDetailsOrProgramDescription":"From almost their first day on the job, employees want to know how quickly they can be promoted and what kinds of raises they’re likely to receive. In fact, millennials more than most generations desire quick promotions and raises. Yet, few organizations have a strategic framework that weaves together compensation and career paths into a robust program that",
+    "BenefitsAndLearningObjectives2":"Attendees will be provided with key tools including:\n\n1.\tHow to articulate the business case for linking compensation to career paths using data from studies and articles.\n2.\tList steps to developing compensation and career paths as one system including considerations and methodologies for job leveling, market pricing, and designing career paths. \n\nSpecific topic areas will include: \n\n• Identifying organizational pain points as it relates to upward mobility and how to make key decision makers aware of issues related to career pathing.\n• Compelling reasons for retaining and growing employees internally.\n• What WE know employees want to know from Day One in order to advance their careers.\n• The power and synergy of aligning career pathing and compensation management.\n\nThe presenters will provide some key steps for implementing a career pathing model and illustrate the positive organizational impact when creating a holistic, integrated approach to aligning compensation and career paths."
+  }
+}

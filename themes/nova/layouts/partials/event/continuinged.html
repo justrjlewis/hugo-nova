@@ -1,15 +1,18 @@
 <!-- continuing ed -->
-  <div style="margin-bottom:25px;">  
-    <p style="margin-top:10px;  font-size: 18px; font-weight:bold; text-transform:uppercase;">
-    <span style="background-image: url('https://novashrm.site-ym.com/resource/resmgr/images/page_accent_images/accents2.png'); background-size: auto 16px; background-repeat: no-repeat; background-position: -45.5px center; color: rgb(218, 98, 0); display: inline-block; overflow: none; width: 16px;">&nbsp; </span> continuing education</p>
-    <div style="margin-left:20px;">
-      {{ if isset .Params "creditsApproved" }}
-        This event is <strong>approved</strong> for <strong>{{ index .Params "creditsApprovedBusiness" }}</strong> Business recertification credits through the Human Resource Certification Institute (HRCI).  This event is also <strong>approved</strong> for<strong> {{ index .Params "creditsApprovedGeneral" }}</strong> General recertification credits through the Human Resource Certification Institute (HRCI).  This event is <strong>approved</strong> for <strong>{{ index .Params "creditsApprovedSHRM" }}</strong> recertification credits through the Society for Human Resource Management (SHRM).
-      {{else}}
-        This program has been submitted to the HR Certification Institute and the Society for Human Resource Management for review.
-      {{ end }}
-      <br/><span>
-        All attendees (member and non-members) may receive HRCI credits, when offered for an event.  
-      </span>
+  {{ if eq .Params.ce "yes" }}
+    <div style="margin-bottom:25px;">  
+      <p style="color:rgba(159, 0, 1, 1); margin-top:10px; text-transform:uppercase;">
+        <span style="border-bottom-style: solid; border-bottom-width: 1px;">continuing education</span>
+      </p>
+      <div style="margin-left: 22px;">
+        {{ if eq .Params.cecreditsapproved "True" }}
+          This event is <strong>approved</strong> for {{with $.Params.cecredits }}<strong>{{ . }}</strong>{{ end }} {{with $.Params.cecreditstype }}<strong>{{ title . }}</strong>{{ end }} recertification credits through the Human Resource Certification Institute (HRCI) and {{with $.Params.cecredits }}<strong>{{ . }}</strong>{{ end }} Society for Human Resource Management (SHRM) recertification credits.
+        {{else}}
+          This program has been submitted to the HR Certification Institute and the Society for Human Resource Management for review.
+        {{ end }}
+        <br/><span>
+          All attendees (member and non-members) may receive HRCI credits, when offered for an event.  
+        </span>
+      </div>
     </div>
-  </div>
+  {{ end }}
